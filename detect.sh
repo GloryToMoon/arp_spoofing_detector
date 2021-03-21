@@ -11,7 +11,7 @@ mac_pool=$(grep -w "$2" "$file" | awk '{print $2}' | sort | uniq)
 suspects=$(
 for i in $mac_pool
 do
-	grep "$i" "$file" | awk '{print $1'}
+	grep "$i" "$file" | awk '{print $1}'
 done | sort | uniq
 )
 for suspect in $suspects
@@ -24,8 +24,4 @@ done
 #rm "$file" &> /dev/null
 }
 
-#while ((1))
-for i in "test"
-do
-	enum_arp "$interface" "$gateway"
-done
+enum_arp "$interface" "$gateway"
