@@ -21,7 +21,7 @@ do
 		python3 telegram_notify.py "$suspect" $(grep -w "$suspect" "$file" | sed -n 1p | awk '{print $2'})
 	fi
 done
-#rm "$file" &> /dev/null
+rm "$file" &> /dev/null
 }
 
 enum_arp "$interface" "$gateway"
