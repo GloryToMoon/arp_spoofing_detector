@@ -1,3 +1,4 @@
+#!/bin/bash
 #<== var interface ==>
 interface="wlan0"
 
